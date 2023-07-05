@@ -14,6 +14,11 @@ elif [[ "$1" == "--logs" ]]; then
     else
         echo "Nieprawidłowy argument. Podaj liczbę plików."
     fi
+elif [[ "$1" == "--help" ]]; then
+    echo "Dostępne opcje:"
+    echo "  --date      : Wyświetla dzisiejszą datę."
+    echo "  --logs N    : Tworzy N plików logx.txt z informacjami o nazwie pliku, nazwie skryptu i dacie utworzenia."
+    echo "  --help      : Wyświetla wszystkie dostępne opcje skryptu."
 else
-    echo "Nieprawidłowa flaga. Dostępne flagi: --date, --logs"
+    echo "Nieprawidłowa flaga. Dostępne flagi: --date, --logs, --help"
 fi
