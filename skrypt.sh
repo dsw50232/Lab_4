@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [[ "$1" == "--date" ]]; then
+if [[ "$1" == "--date" ]] || [[ "$1" == "-d" ]]; then
     echo "Dzisiejsza data: $(date +%Y-%m-%d)"
-elif [[ "$1" == "--logs" ]]; then
+elif [[ "$1" == "--logs" ]] || [[ "$1" == "-l" ]]; then
     if [[ "$2" =~ ^[0-9]+$ ]]; then
         liczba_plikow=$2
         for ((i=1; i<=liczba_plikow; i++)); do
@@ -14,11 +14,11 @@ elif [[ "$1" == "--logs" ]]; then
     else
         echo "Nieprawidłowy argument. Podaj liczbę plików."
     fi
-elif [[ "$1" == "--help" ]]; then
+elif [[ "$1" == "--help" ]] || [[ "$1" == "-h" ]]; then
     echo "Dostępne opcje:"
-    echo "  --date      : Wyświetla dzisiejszą datę."
-    echo "  --logs N    : Tworzy N plików logx.txt z informacjami o nazwie pliku, nazwie skryptu i dacie utworzenia."
-    echo "  --help      : Wyświetla wszystkie dostępne opcje skryptu."
+    echo "  --date          : Wyświetla dzisiejszą datę."
+    echo "  --logs N        : Tworzy N plików logx.txt z informacjami o nazwie pliku, nazwie skryptu i dacie utworzenia."
+    echo "  --help          : Wyświetla wszystkie dostępne opcje skryptu."
 else
-    echo "Nieprawidłowa flaga. Dostępne flagi: --date, --logs, --help"
+    echo "Nieprawidłowa flaga. Dostępne flagi: --date, -d, --logs, -l, --help, -h"
 fi
