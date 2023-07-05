@@ -16,9 +16,9 @@ elif [[ "$1" == "--logs" ]] || [[ "$1" == "-l" ]]; then
     fi
 elif [[ "$1" == "--help" ]] || [[ "$1" == "-h" ]]; then
     echo "Dostępne opcje:"
-    echo "  --date          : Wyświetla dzisiejszą datę."
-    echo "  --logs N        : Tworzy N plików logx.txt z informacjami o nazwie pliku, nazwie skryptu i dacie utworzenia."
-    echo "  --help          : Wyświetla wszystkie dostępne opcje skryptu."
+    echo "  --date, -d      : Wyświetla dzisiejszą datę."
+    echo "  --logs N, -l N  : Tworzy N plików logx.txt z informacjami o nazwie pliku, nazwie skryptu i dacie utworzenia."
+    echo "  --help, -h      : Wyświetla wszystkie dostępne opcje skryptu."
 else
     echo "Nieprawidłowa flaga. Dostępne flagi: --date, -d, --logs, -l, --help, -h"
 fi
