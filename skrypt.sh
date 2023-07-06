@@ -18,6 +18,8 @@ elif [[ "$1" == "--help" ]] || [[ "$1" == "-h" ]]; then
     echo "Dostępne opcje:"
     echo "  --date, -d      : Wyświetla dzisiejszą datę."
     echo "  --logs N, -l N  : Tworzy N plików logx.txt z informacjami o nazwie pliku, nazwie skryptu i dacie utworzenia."
+    echo "  --init, -i      : Tworzy nowy katalog w aktualnie otwartym, klonuje do niego repozytorium zdalne i umieszcza wpis w zmiennej środowiskowej PATH"
+    echo "  --error N, -e N : Tworzy N plików errorx.txt z informacjami o nazwie pliku, nazwie skryptu i dacie utworzenia. Bez argumentu N - domyślnie tworzy 100."
     echo "  --help, -h      : Wyświetla wszystkie dostępne opcje skryptu."
 elif [[ "$1" == "--error" ]] || [[ "$1" == "-e" ]]; then
     if [[ "$2" =~ ^[0-9]+$ ]]; then
