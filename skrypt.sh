@@ -19,6 +19,14 @@ elif [[ "$1" == "--help" ]] || [[ "$1" == "-h" ]]; then
     echo "  --date, -d      : Wyświetla dzisiejszą datę."
     echo "  --logs N, -l N  : Tworzy N plików logx.txt z informacjami o nazwie pliku, nazwie skryptu i dacie utworzenia."
     echo "  --help, -h      : Wyświetla wszystkie dostępne opcje skryptu."
+elif [[ "$1" == "--init" ]]; then
+    mkdir repo_clon
+    git clone https://github.com/dsw50232/Lab_4.git repo_clon/
+    echo "Repozytorium zostało sklonowane do katalogu 'repo_clon'."
+    echo "Ustawiam ścieżkę w zmiennej środowiskowej PATH."
+    echo "export PATH=\"\$PATH:$(pwd)/repo_clon\"" >> ~/.bashrc
+    echo "Ścieżka została dodana do zmiennej środowiskowej PATH."
+    source ~/.bashrc
 else
-    echo "Nieprawidłowa flaga. Dostępne flagi: --date, -d, --logs, -l, --help, -h"
+    echo "Nieprawidłowa flaga. Dostępne flagi: --date, -d, --logs, -l, --init, --help, -h"
 fi
